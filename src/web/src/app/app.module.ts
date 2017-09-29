@@ -14,7 +14,6 @@ import { NavbarSitesListComponent } from './navbar-sites-list/navbar-sites-list.
 import { PineiroComponent } from './pineiro/pineiro.component';
 // Service Imports
 import { SiteService } from './navbar-sites-list/shared/site.service';
-import { BreadcrumbService } from 'ng2-breadcrumb/ng2-breadcrumb';
 import { ShowcasePineiroComponent } from './showcase-pineiro/showcase-pineiro.component';
 
 
@@ -53,8 +52,7 @@ export const firebaseConfig = {
   providers: [
       AngularFireAuth,
       AngularFireDatabase,
-      SiteService,
-      BreadcrumbService
+      SiteService
   ],
   bootstrap: [AppComponent]
 })
