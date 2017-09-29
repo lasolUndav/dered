@@ -11,11 +11,21 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from "@angular/router";
 import { DeredComponent } from './dered/dered.component';
 import { NavbarSitesListComponent } from './navbar-sites-list/navbar-sites-list.component';
+import { PineiroComponent } from './pineiro/pineiro.component';
 // Service Imports
 import { SiteService } from './navbar-sites-list/shared/site.service';
+import { BreadcrumbService } from 'ng2-breadcrumb/ng2-breadcrumb';
+import { ShowcasePineiroComponent } from './showcase-pineiro/showcase-pineiro.component';
+
 
 const appRoutes: Routes = [
-  {path: '', component: DeredComponent }
+  { path: '', component: DeredComponent },
+  { path: 'pineiro', component: PineiroComponent },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
 ];
 
 export const firebaseConfig = {
@@ -31,7 +41,9 @@ export const firebaseConfig = {
     AppComponent,
     NavbarComponent,
     DeredComponent,
-    NavbarSitesListComponent
+    NavbarSitesListComponent,
+    PineiroComponent,
+    ShowcasePineiroComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +53,8 @@ export const firebaseConfig = {
   providers: [
       AngularFireAuth,
       AngularFireDatabase,
-      SiteService
+      SiteService,
+      BreadcrumbService
   ],
   bootstrap: [AppComponent]
 })
