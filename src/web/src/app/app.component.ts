@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  navbarLeftButtonClicked:boolean;
+
+  onNavbarLeftButtonChanged(isClicked:boolean) {
+    this.navbarLeftButtonClicked = isClicked;
+  }
+  onNavbarLeftClosed(navbarLeftClosed:boolean) {
+    this.navbarLeftButtonClicked = navbarLeftClosed;
+  }
 }

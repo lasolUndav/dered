@@ -15,16 +15,14 @@ import { PineiroComponent } from './pineiro/pineiro.component';
 // Service Imports
 import { SiteService } from './navbar-sites-list/shared/site.service';
 import { ShowcasePineiroComponent } from './showcase-pineiro/showcase-pineiro.component';
+import { NavbarLeftComponent } from './navbar-left/navbar-left.component';
+import { PageContentComponent } from './page-content/page-content.component';
+import { NavbarLeftButtonComponent } from './navbar-left-button/navbar-left-button.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: DeredComponent },
-  { path: 'pineiro', component: PineiroComponent },
-  {
-    path: '**',
-    redirectTo: '',
-    pathMatch: 'full'
-  }
+  { path: 'pineiro', component: PineiroComponent }
 ];
 
 export const firebaseConfig = {
@@ -42,7 +40,10 @@ export const firebaseConfig = {
     DeredComponent,
     NavbarSitesListComponent,
     PineiroComponent,
-    ShowcasePineiroComponent
+    ShowcasePineiroComponent,
+    NavbarLeftComponent,
+    PageContentComponent,
+    NavbarLeftButtonComponent
   ],
   imports: [
     BrowserModule,

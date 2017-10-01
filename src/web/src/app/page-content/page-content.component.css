@@ -1,0 +1,17 @@
+.page-content {
+    height: 1200px;
+    padding: 0px;
+    margin-left: 0px;
+    -webkit-transition: margin-left 300ms;
+    -o-transition: margin-left 300ms;
+    transition: margin-left 300ms;
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        margin-left: 0px;
+        -webkit-transition: margin-left 300ms;
+        -o-transition: margin-left 300ms;
+        transition: margin-left 300ms;
+    }
+}

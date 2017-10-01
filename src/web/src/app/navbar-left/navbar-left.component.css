@@ -1,0 +1,84 @@
+/* Dash Navbar Left = nb
+/ -------------------------------------------------- */
+.dash-navbar-left {
+    position: fixed;
+    background-color: #2A2D35;
+    width: 250px;
+    top: 87px;
+    bottom: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 1000;
+    padding-top: 5px;
+    -webkit-transition: left 300ms;
+    -o-transition: left 300ms;
+    transition: left 300ms;
+}
+
+.nb-closebtn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    margin-left: 50px;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    opacity: .5;
+}
+
+a.nb-closebtn {
+    text-decoration: none;
+}
+
+.dash-navbar-left .nb-nav-title {
+    text-transform: uppercase;
+    color: #7f799c;
+    border-bottom: 1px solid rgba(255,152,0,0.1);
+    padding: 75px 25px 10px 25px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.dash-navbar-left .nb-nav {
+    padding-left: 0;
+    list-style: none;
+}
+.dash-navbar-left .nb-nav ul {
+    padding-left: 0;
+    list-style: none;
+}
+.dash-navbar-left .nb-nav li {
+    position: relative;
+}
+.dash-navbar-left .nb-nav li a {
+    display: block;
+    outline: 0;
+    padding: 8px 25px 7px;
+    font-size: 13px;
+    color: #b7b4c7;
+}
+.dash-navbar-left .nb-nav li a:hover,
+.dash-navbar-left .nb-nav li a:focus {
+    color: #eeeeee;
+    text-decoration: none;
+    background-color: rgba(255,152,0,0.1);
+    -webkit-box-shadow: inset 3px 0 0 orange;
+    box-shadow: inset 3px 0 0 orange;
+}
+
+.dash-navbar-left .nb-nav li.active > a {
+    background-color: rgba(255,152,0,0.1);
+    -webkit-box-shadow: inset 3px 0 0 orange;
+    box-shadow: inset 3px 0 0 orange;
+}
+
+@media (max-width: 768px) {
+    .dash-navbar-left {
+        display: none;
+    }
+}

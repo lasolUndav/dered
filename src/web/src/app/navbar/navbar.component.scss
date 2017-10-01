@@ -9,3 +9,10 @@ $primary: #3292a6;
     padding-right: 10px;
   }
 }
+
+@media (min-width: 768px) {
+  .nt-sedes-item {
+    display: none;
+  }
+}
+
