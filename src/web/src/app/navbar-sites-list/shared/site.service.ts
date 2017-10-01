@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
-//import { Observable } from 'rxjs';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { Site } from './site.model';
 
 
@@ -8,7 +7,6 @@ import { Site } from './site.model';
 export class SiteService {
 
   sites: FirebaseListObservable<any[]>;
-  //site: FirebaseObjectObservable<any>;
 
   constructor(
       public fireDatabase:AngularFireDatabase
