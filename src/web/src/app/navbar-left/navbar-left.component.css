@@ -77,8 +77,19 @@ a.nb-closebtn {
     box-shadow: inset 3px 0 0 orange;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+    /*
     .dash-navbar-left {
         display: none;
+        left: -250px;
     }
+    */
+    /*
+    .dash-navbar-left.nb-visible {
+        left: -250px;
+    }
+    .dash-navbar-left.nb-visible.nb-show {
+        left: 0;
+    }
+    */
 }

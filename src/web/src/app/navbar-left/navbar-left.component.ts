@@ -1,6 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { SiteService } from '../navbar-sites-list/shared/site.service';
-import { Site } from '../navbar-sites-list/shared/site.model';
+import { WindowSizeService } from '../shared/window-size.service';
 
 @Component({
   selector: 'app-navbar-left',
@@ -12,19 +11,19 @@ export class NavbarLeftComponent implements OnInit {
   @Input('hide-navbar-left') hideNavbarLeft: boolean;
   @Output('change') click = new EventEmitter;
 
-  sites:Site[];
+  screenWidth:number;
 
-  constructor(public siteService: SiteService) {
+  constructor(public windowSizeService:WindowSizeService) {
   }
 
   ngOnInit() {
-    this.siteService.getSites().subscribe(sites =>{
-      this.sites = sites;
-    });
   }
 
   getNavbarLeftPosition() {
-    if (this.hideNavbarLeft) {
+
+    this.getWindowSizeScreen();
+
+    if (this.hideNavbarLeft && this.screenWidth > 767) {
       return "0px";
     } else {
       return "-250px";
@@ -34,6 +33,10 @@ export class NavbarLeftComponent implements OnInit {
   onClick() {
     this.hideNavbarLeft = !this.hideNavbarLeft;
     this.click.emit(this.hideNavbarLeft);
+  }
+
+  getWindowSizeScreen() {
+    this.screenWidth = this.windowSizeService.getWindowsScreenSize();
   }
 
 }

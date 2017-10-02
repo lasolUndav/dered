@@ -3,11 +3,6 @@
   <a href="javascript:void(0)" class="nb-closebtn" (click)="onClick()">&times;</a>
   <p class="nb-nav-title">Sedes</p>
   <ul class="nb-nav">
-    <li class="active" *ngFor="let site of sites">
-      <a href="{{ site.ruta }}">
-        <span class="glyphicon glyphicon-folder-open nb-link-icon"></span>
-        <span class="nb-link-text">{{ site.nombre }}</span>
-      </a>
-    </li>
+    <app-site-list-navbar-left></app-site-list-navbar-left>
   </ul>
 </div> <!-- /.dash-navbar-left -->

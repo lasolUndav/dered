@@ -7,7 +7,7 @@
     transition: margin-left 300ms;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .page-content {
         margin-left: 0px;
         -webkit-transition: margin-left 300ms;
