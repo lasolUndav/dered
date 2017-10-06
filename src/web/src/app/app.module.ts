@@ -21,7 +21,7 @@ import { PageContentComponent } from './page-content/page-content.component';
 import { NavbarLeftButtonComponent } from './navbar-left-button/navbar-left-button.component';
 import { SitesComponent } from './sites/sites.component';
 import { SiteListNavbarTopComponent } from './sites/site-list-navbar-top/site-list-navbar-top.component';
-import { SiteListNavbarLeftComponent } from './sites/site-list-navbar-left/site-list-navbar-left.component';
+import { SitesMenuComponent } from './sites/sitesMenu/sitesMenu.component';
 import { NavbarTopComponent } from './navbar-top/navbar-top.component';
 
 
@@ -49,7 +49,7 @@ export const firebaseConfig = {
     NavbarLeftButtonComponent,
     SitesComponent,
     SiteListNavbarTopComponent,
-    SiteListNavbarLeftComponent,
+    SitesMenuComponent,
     NavbarTopComponent
   ],
   imports: [

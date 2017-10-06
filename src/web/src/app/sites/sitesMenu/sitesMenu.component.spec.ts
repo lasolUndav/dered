@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SiteListNavbarLeftComponent } from './site-list-navbar-left.component';
+import { SitesMenuComponent } from './site-list-navbar-left.component';
 
-describe('SiteListNavbarLeftComponent', () => {
+describe('SitesMenuComponent', () => {
   let component: SiteListNavbarLeftComponent;
   let fixture: ComponentFixture<SiteListNavbarLeftComponent>;
 
