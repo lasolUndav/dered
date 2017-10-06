@@ -1,6 +1,5 @@
 export interface Site {
-    $key?:string;
-    id?: number;
-    nombre?: string;
-    ruta?: string;
+    $key:string;
+    nombre: string;
+    ruta: string;
 }

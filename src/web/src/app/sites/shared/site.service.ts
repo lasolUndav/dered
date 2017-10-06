@@ -4,13 +4,10 @@ import { Site } from './site.model';
 
 @Injectable()
 export class SiteService {
+  sites: FirebaseListObservable<Site[]>;
 
-  sites: FirebaseListObservable<any[]>;
-
-  constructor(
-      public fireDatabase:AngularFireDatabase
-  ) {
-    this.sites = this.fireDatabase.list('/sedes') as FirebaseListObservable<Site[]>;
+  constructor(fireDb:AngularFireDatabase) {
+    this.sites = fireDb.list('/sedes');
   }
 
   getSites() {

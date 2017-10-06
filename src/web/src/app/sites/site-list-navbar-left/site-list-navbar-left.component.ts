@@ -11,12 +11,11 @@ export class SiteListNavbarLeftComponent implements OnInit {
 
   sites:Site[];
 
-  constructor(public siteService: SiteService) { }
+  constructor(private siteService: SiteService) { }
 
   ngOnInit() {
     this.siteService.getSites().subscribe(sites => {
       this.sites = sites;
     });
   }
-
 }
