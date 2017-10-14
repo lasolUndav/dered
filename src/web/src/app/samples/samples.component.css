@@ -1,0 +1,43 @@
+#samples {
+    background-color: #E9ECEE;
+}
+.content-box {
+    padding: 30px 0px;
+}
+
+.content-title h3 {
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.content-title-underline {
+    width: 30px;
+    height: 3px;
+    background-color: #34c6d3;
+    margin: 0 auto 30px auto;
+}
+
+.card {
+    -webkit-box-shadow: 1px 1px 2px 1px rgba(133,133,133,.6);
+    box-shadow: 1px 1px 2px 1px rgba(133,133,133,.6);
+}
+.card-block-btn {
+    /*display: block;*/
+    /*
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid black;
+    */
+
+}
+
+.align-center {
+    /*display: block;
+    width: 50%;
+    margin: 0 auto;
+    */
+}

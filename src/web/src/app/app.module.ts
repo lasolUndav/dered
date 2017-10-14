@@ -23,6 +23,7 @@ import { SitesComponent } from './sites/sites.component';
 import { SiteListNavbarTopComponent } from './sites/site-list-navbar-top/site-list-navbar-top.component';
 import { SitesMenuComponent } from './sites/sitesMenu/sitesMenu.component';
 import { NavbarTopComponent } from './navbar-top/navbar-top.component';
+import { SamplesComponent } from './samples/samples.component';
 
 
 const appRoutes: Routes = [
@@ -50,7 +51,8 @@ export const firebaseConfig = {
     SitesComponent,
     SiteListNavbarTopComponent,
     SitesMenuComponent,
-    NavbarTopComponent
+    NavbarTopComponent,
+    SamplesComponent
   ],
   imports: [
     BrowserModule,
