@@ -16,13 +16,13 @@ import { PineiroComponent } from './pineiro/pineiro.component';
 import { SiteService } from './sites/shared/site.service';
 import { WindowSizeService } from './shared/window-size.service';
 import { ShowcasePineiroComponent } from './showcase-pineiro/showcase-pineiro.component';
-import { NavbarLeftComponent } from './navbar-left/navbar-left.component';
+import { LeftMenuComponent } from './Layout/left-menu/left-menu.component';
 import { PageContentComponent } from './page-content/page-content.component';
 import { NavbarLeftButtonComponent } from './navbar-left-button/navbar-left-button.component';
 import { SitesComponent } from './sites/sites.component';
 import { SiteListNavbarTopComponent } from './sites/site-list-navbar-top/site-list-navbar-top.component';
 import { SitesMenuComponent } from './sites/sitesMenu/sitesMenu.component';
-import { NavbarTopComponent } from './navbar-top/navbar-top.component';
+import { HeaderComponent } from './layout/header/header.component';
 
 
 const appRoutes: Routes = [
@@ -44,13 +44,13 @@ export const firebaseConfig = {
     DeredComponent,
     PineiroComponent,
     ShowcasePineiroComponent,
-    NavbarLeftComponent,
+    LeftMenuComponent,
     PageContentComponent,
     NavbarLeftButtonComponent,
     SitesComponent,
     SiteListNavbarTopComponent,
     SitesMenuComponent,
-    NavbarTopComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,12 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { WindowSizeService } from '../shared/window-size.service';
+import { WindowSizeService } from '../../shared/window-size.service';
 
 @Component({
-  selector: 'app-navbar-left',
-  templateUrl: './navbar-left.component.html',
-  styleUrls: ['./navbar-left.component.css']
+  selector: 'left-menu',
+  templateUrl: './left-menu.component.html',
+  styleUrls: ['./left-menu.component.css']
 })
-export class NavbarLeftComponent implements OnInit {
+export class LeftMenuComponent implements OnInit {
 
   @Input('hide-navbar-left') hideNavbarLeft: boolean;
   @Output('change') click = new EventEmitter;

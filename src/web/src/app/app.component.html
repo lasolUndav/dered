@@ -1,6 +1,6 @@
-<app-navbar-top></app-navbar-top>
+<header></header>
 <app-navbar-left-button [is-clicked]="navbarLeftButtonClicked" (change)="onNavbarLeftButtonChanged($event)"></app-navbar-left-button>
-<app-navbar-left [hide-navbar-left]="navbarLeftButtonClicked" (change)="onNavbarLeftClosed($event)"></app-navbar-left>
+<left-menu [hide-navbar-left]="navbarLeftButtonClicked" (change)="onNavbarLeftClosed($event)"></left-menu>
 <app-page-content [push-content]="navbarLeftButtonClicked">
     <router-outlet></router-outlet>
 </app-page-content>
