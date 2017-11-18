@@ -11,17 +11,16 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from "@angular/router";
 import { DeredComponent } from './dered/dered.component';
 //import { NavbarSitesListComponent } from './navbar-sites-list/navbar-sites-list.component';
-import { PineiroComponent } from './pineiro/pineiro.component';
+import { PineiroComponent } from './sedes/pineiro/pineiro.component';
 // Service Imports
-import { SiteService } from './sites/shared/site.service';
+import { SedeService } from './sedes/shared/sede.service';
 import { WindowSizeService } from './shared/window-size.service';
-import { ShowcasePineiroComponent } from './showcase-pineiro/showcase-pineiro.component';
-import { LeftMenuComponent } from './Layout/left-menu/left-menu.component';
+import { HomePineiroComponent } from './sedes/pineiro/home-pineiro/home-pineiro.component';
+import { LeftMenuComponent } from './layout/left-menu/left-menu.component';
 import { PageContentComponent } from './page-content/page-content.component';
 import { NavbarLeftButtonComponent } from './navbar-left-button/navbar-left-button.component';
-import { SitesComponent } from './sites/sites.component';
-import { SiteListNavbarTopComponent } from './sites/site-list-navbar-top/site-list-navbar-top.component';
-import { SitesMenuComponent } from './sites/sitesMenu/sitesMenu.component';
+import { SedesMenuComponent } from './sedes/shared/sedesMenu/sedesMenu.component';
+import { SedesNavigationBarComponent } from './sedes/shared/sedesNavigationBar/sedesNavigationBar.component';
 import { HeaderComponent } from './layout/header/header.component';
 
 
@@ -43,13 +42,12 @@ export const firebaseConfig = {
     AppComponent,
     DeredComponent,
     PineiroComponent,
-    ShowcasePineiroComponent,
+    HomePineiroComponent,
     LeftMenuComponent,
     PageContentComponent,
     NavbarLeftButtonComponent,
-    SitesComponent,
-    SiteListNavbarTopComponent,
-    SitesMenuComponent,
+    SedesMenuComponent,
+    SedesNavigationBarComponent,
     HeaderComponent
   ],
   imports: [
@@ -58,10 +56,10 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [
-      AngularFireAuth,
-      AngularFireDatabase,
-      SiteService,
-      WindowSizeService
+    AngularFireAuth,
+    AngularFireDatabase,
+    SedeService,
+    WindowSizeService
   ],
   bootstrap: [AppComponent]
 })

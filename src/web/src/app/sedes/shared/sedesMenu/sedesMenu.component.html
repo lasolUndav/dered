@@ -1,0 +1,6 @@
+<li class="active" *ngFor="let sede of sedes">
+  <a href="{{ sede.ruta }}" routerLink="/{{ sede.ruta }}">
+    <span class="nb-link-icon"></span>
+    <span class="nb-link-text">{{ sede.metafora }}</span>
+  </a>
+</li>

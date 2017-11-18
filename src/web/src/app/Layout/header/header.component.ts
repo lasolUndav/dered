@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SedesMenuComponent} from '../../Sedes/shared/sedesMenu/sedesMenu.component'
+import {SedeService} from '../../Sedes/shared/sede.service'
 
 @Component({
   selector: 'header',

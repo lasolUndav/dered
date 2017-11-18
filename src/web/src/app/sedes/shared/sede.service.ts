@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { Site } from './site.model';
+import { Sede } from './sede.model';
 
 @Injectable()
-export class SiteService {
-  sites: FirebaseListObservable<Site[]>;
+export class SedeService {
+  sedes: FirebaseListObservable<Sede[]>;
 
   constructor(fireDb:AngularFireDatabase) {
-    this.sites = fireDb.list('/sedes');
+    this.sedes = fireDb.list('/sedes');
   }
 
-  getSites() {
-    return this.sites;
+  getSedes() {
+    return this.sedes;
   }
 }
