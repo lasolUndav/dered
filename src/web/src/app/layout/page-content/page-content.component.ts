@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WindowSizeService } from '../shared/window-size.service';
+import { WindowSizeService } from '../../shared/window-size.service';
 
 @Component({
   selector: 'app-page-content',
