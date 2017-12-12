@@ -1,24 +1,20 @@
-<section *ngIf="sede" id="showcase" class="py-5">
+<section id="showcase" class="py-5">
   <div class="primary-overlay text-white">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-sm-12 text-center">
           <h1 class="display-4 mt-2 pt-2">
-            {{sede.nombre}}
+            Museo Escuela
           </h1>
           <p class="lead">
+
           </p>
         </div>
         <div class="col-md-6 col-sm-12">
         </div>
       </div>
+      <div class="row">
+      </div>
     </div>
-  </div>
-</section>
-<section *ngIf="sede"  class="py-5">
-  <div>
-    <agm-map [latitude]="sede.lat" [longitude]="sede.lng" [zoom]="15">
-      <agm-marker [latitude]="sede.lat" [longitude]="sede.lng"></agm-marker>
-    </agm-map>
   </div>
 </section>
