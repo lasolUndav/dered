@@ -4,10 +4,9 @@
       <div class="row">
         <div class="col-md-6 col-sm-12 text-center">
           <h1 class="display-4 mt-2 pt-2">
-            Museo memoria viva
+            {{sede.nombre}}
           </h1>
           <p class="lead">
-
           </p>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -16,5 +15,12 @@
       <div class="row">
       </div>
     </div>
+  </div>
+</section>
+<section class="py-5">
+  <div>
+    <agm-map [latitude]="sede.lat" [longitude]="sede.lng" [zoom]="15">
+      <agm-marker [latitude]="sede.lat" [longitude]="sede.lng"></agm-marker>
+    </agm-map>
   </div>
 </section>
