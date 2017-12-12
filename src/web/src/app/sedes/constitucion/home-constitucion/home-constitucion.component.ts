@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SedeService } from '../../shared/sede.service'
+import { Sede} from '../../shared/sede.model'
 
 @Component({
   selector: 'app-showcase-constitucion',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeConstitucionComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  sedeService: SedeService;
+  sede: Sede;
+  constructor(sedeService: SedeService)
+  {
+    this.sedeService = sedeService;
   }
 
+  ngOnInit() {
+    this.sedeService.getConstitucion().subscribe(sede=> {
+      this.sede = sede;
+    });
+  }
 }
