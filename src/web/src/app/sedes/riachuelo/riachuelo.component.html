@@ -1,10 +1,10 @@
 <div class="content">
-  <div class="container">
+  <div class="container" *ngIf="sede">
     <div class="row row-offcanvas row-offcanvas-right">
       <div class="col-xs-12 col-sm-12">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a routerLink="/">DERED</a></li>
-          <li class="breadcrumb-item active">La cristalería del riachuelo</li>
+          <li class="breadcrumb-item active">{{sede.metafora}}</li>
         </ol>
         <app-showcase-riachuelo></app-showcase-riachuelo>
 
@@ -15,3 +15,10 @@
     </div>
   </div>
 </div>
+<section *ngIf="sede"  class="py-5">
+  <div>
+    <agm-map [latitude]="sede.lat" [longitude]="sede.lng" [zoom]="15">
+      <agm-marker [latitude]="sede.lat" [longitude]="sede.lng"></agm-marker>
+    </agm-map>
+  </div>
+</section>

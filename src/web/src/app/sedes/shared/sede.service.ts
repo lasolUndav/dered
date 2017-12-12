@@ -8,11 +8,13 @@ export class SedeService {
   sedes: FirebaseListObservable<Sede[]>;
   pineiro: FirebaseObjectObservable<Sede>;
   espana: FirebaseObjectObservable<Sede>;
+  riachuelo: FirebaseObjectObservable<Sede>;
   constructor(fireDb:AngularFireDatabase) {
     this.fireDb = fireDb;
     this.sedes = fireDb.list('/sedes');
     this.pineiro = fireDb.object('/sedes/1');
     this.espana = fireDb.object('/sedes/2');
+    this.riachuelo = fireDb.object('/sedes/3');
   }
 
   getSedes() {
@@ -25,5 +27,9 @@ export class SedeService {
 
   getEspana(){
     return this.espana;
+  }
+
+  getRiachuelo(){
+    return this.riachuelo;
   }
 }
