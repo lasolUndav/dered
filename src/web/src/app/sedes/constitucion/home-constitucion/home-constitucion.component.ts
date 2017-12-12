@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { SedeService } from '../../shared/sede.service'
+import { Component, OnInit, Input } from '@angular/core';
 import { Sede} from '../../shared/sede.model'
 
 @Component({
@@ -9,16 +8,11 @@ import { Sede} from '../../shared/sede.model'
 })
 export class HomeConstitucionComponent implements OnInit {
 
-  sedeService: SedeService;
-  sede: Sede;
-  constructor(sedeService: SedeService)
+  @Input() sede: Sede;
+  constructor()
   {
-    this.sedeService = sedeService;
   }
 
   ngOnInit() {
-    this.sedeService.getConstitucion().subscribe(sede=> {
-      this.sede = sede;
-    });
   }
 }

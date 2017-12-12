@@ -1,0 +1,24 @@
+<section id="showcase" class="py-5">
+  <div class="primary-overlay text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 text-center">
+          <h1 class="display-4 mt-2 pt-2">
+            {{sede.nombre}}
+          </h1>
+          <p class="lead">
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-5">
+  <div>
+    <agm-map [latitude]="sede.lat" [longitude]="sede.lng" [zoom]="15">
+      <agm-marker [latitude]="sede.lat" [longitude]="sede.lng"></agm-marker>
+    </agm-map>
+  </div>
+</section>
