@@ -16,6 +16,22 @@ $primary-overlay: rgba(50, 146, 166, 0.8);
     height: 100%;
   }
 }
+
+#muestras {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  min-height: 350px;
+
+  .primary-overlay {
+    background-color: $primary-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 agm-map {
   height: 300px;
 }

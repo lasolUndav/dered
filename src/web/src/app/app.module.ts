@@ -3,6 +3,24 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { Angular2ImageGalleryModule } from 'angular2-image-gallery';
+import 'web-animations-js/web-animations.min';
+import 'hammerjs/hammer';
+import 'core-js/es6/symbol';
+import 'core-js/es6/object';
+import 'core-js/es6/function';
+import 'core-js/es6/parse-int';
+import 'core-js/es6/parse-float';
+import 'core-js/es6/number';
+import 'core-js/es6/math';
+import 'core-js/es6/string';
+import 'core-js/es6/date';
+import 'core-js/es6/array';
+import 'core-js/es6/regexp';
+import 'core-js/es6/map';
+import 'core-js/es6/set';
+import 'web-animations-js';
+
 // Angular Fire Imports
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase } from 'angularfire2/database';
@@ -36,6 +54,7 @@ import { HomeRiachueloComponent } from './sedes/riachuelo/home-riachuelo/home-ri
 import { HomeConstitucionComponent } from './sedes/constitucion/home-constitucion/home-constitucion.component';
 import { HomeEscuelaComponent } from './sedes/escuela/home-escuela/home-escuela.component';
 import { HomeDoceOctubreComponent } from './sedes/doceOctubre/home-doceOctubre/home-doceOctubre.component';
+import { AnimalesPoderComponent } from './sedes/pineiro/muestras/animalesPoder/animalesPoder.component';
 
 const appRoutes: Routes = [
   { path: '', component: DeredComponent },
@@ -44,7 +63,8 @@ const appRoutes: Routes = [
   { path: 'riachuelo', component: RiachueloComponent, data: { idSede: 3 } },
   { path: 'escuela', component: EscuelaComponent, data: { idSede: 4 } },
   { path: 'constitucion', component: ConstitucionComponent, data: { idSede: 5 } },
-  { path: 'doceOctubre', component: DoceOctubreComponent, data: { idSede: 6 } }
+  { path: 'doceOctubre', component: DoceOctubreComponent, data: { idSede: 6 } },
+  { path: 'pinerio/muestras/animalesDePoder', component: AnimalesPoderComponent }
 ];
 
 export const firebaseConfig = {
@@ -76,7 +96,8 @@ export const firebaseConfig = {
     EscuelaComponent,
     HomeEscuelaComponent,
     DoceOctubreComponent,
-    HomeDoceOctubreComponent
+    HomeDoceOctubreComponent,
+    AnimalesPoderComponent
   ],
   imports: [
     BrowserModule,
@@ -86,13 +107,15 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAuo6FS-DiZuaMiQcqLh7PVGSf7JVFvSug'
-    })
+    }),
+    Angular2ImageGalleryModule
   ],
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
     SedeService,
-    WindowSizeService
+    WindowSizeService,
+    Angular2ImageGalleryModule
   ],
   bootstrap: [AppComponent]
 })
