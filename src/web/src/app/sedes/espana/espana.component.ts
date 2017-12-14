@@ -18,6 +18,7 @@ export class EspanaComponent implements OnInit {
   ngOnInit() {
     this.sedeService.getEspana().subscribe(sede=> {
       this.sede = sede;
+      console.log('listo')
     });
   }
 }

@@ -17,10 +17,28 @@
     </div>
   </div>
 </section>
-<section *ngIf="sede"  class="py-5">
+<section class="py-5">
   <div>
     <agm-map [latitude]="sede.lat" [longitude]="sede.lng" [zoom]="15">
       <agm-marker [latitude]="sede.lat" [longitude]="sede.lng"></agm-marker>
     </agm-map>
+  </div>
+</section>
+<section id="muestras" class="py-5" style=" background-image: url('../../../../assets/images/undav-muestras-espana.jpg');">
+  <div class="primary-overlay text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 text-center">
+          <h1 class="display-4 mt-2 pt-2">
+            sinergías de miradas y omisiones
+          </h1>
+          <p class="lead">
+            <button href="espana/muestras/sinergiaMiradasOmisiones" routerLink="/espana/muestras/sinergiaMiradasOmisiones" type="button" class="btn btn-info">Visitar</button>
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+        </div>
+      </div>
+    </div>
   </div>
 </section>

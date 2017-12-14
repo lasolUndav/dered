@@ -55,6 +55,7 @@ import { HomeConstitucionComponent } from './sedes/constitucion/home-constitucio
 import { HomeEscuelaComponent } from './sedes/escuela/home-escuela/home-escuela.component';
 import { HomeDoceOctubreComponent } from './sedes/doceOctubre/home-doceOctubre/home-doceOctubre.component';
 import { AnimalesPoderComponent } from './sedes/pineiro/muestras/animalesPoder/animalesPoder.component';
+import { SinergiasMiradaOmisionesComponent } from './sedes/espana/muestras/sinergiasMiradasOmisiones/sinergiasMiradasOmisiones.component';
 
 const appRoutes: Routes = [
   { path: '', component: DeredComponent },
@@ -64,7 +65,8 @@ const appRoutes: Routes = [
   { path: 'escuela', component: EscuelaComponent, data: { idSede: 4 } },
   { path: 'constitucion', component: ConstitucionComponent, data: { idSede: 5 } },
   { path: 'doceOctubre', component: DoceOctubreComponent, data: { idSede: 6 } },
-  { path: 'pinerio/muestras/animalesDePoder', component: AnimalesPoderComponent }
+  { path: 'pinerio/muestras/animalesDePoder', component: AnimalesPoderComponent },
+  { path: 'espana/muestras/sinergiaMiradasOmisiones', component: SinergiasMiradaOmisionesComponent }
 ];
 
 export const firebaseConfig = {
@@ -97,7 +99,8 @@ export const firebaseConfig = {
     HomeEscuelaComponent,
     DoceOctubreComponent,
     HomeDoceOctubreComponent,
-    AnimalesPoderComponent
+    AnimalesPoderComponent,
+    SinergiasMiradaOmisionesComponent
   ],
   imports: [
     BrowserModule,
